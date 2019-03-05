@@ -1,0 +1,54 @@
+{
+    "car_data": [
+        {
+            "make": "BMW",
+            "model": "I8",
+            "year": "2015",
+            "imageURL": "https://cache.bmwusa.com/cosy.arox?pov=walkaround&brand=WBBI&vehicle=19IC&client=byo&paint=P0C23&fabric=FNGEK&sa=S027K,S0322,S0508,S0610&date=20180306&angle=330&quality=100&resp=png&BKGND=TRANSPARENT&SHARP=30&HEIGHT=24%25",
+            "quality" : [{ 
+                "name" : "overall",
+                "rating" : 1
+            },{ 
+                "name" : "mechanical",
+                "rating" : 4
+            },{ 
+                "name" : "powertrain",
+                "rating" : 2
+            },{ 
+                "name" : "body",
+                "rating" : 4
+            },{ 
+                "name" : "interior",
+                "rating" : 3
+            },{ 
+                "name" : "accessories",
+                "rating" : 2
+            }]
+        },
+        {
+            "make": "BMW",
+            "model": "M6",
+            "year": "2015",
+            "imageURL": "https://67degreescdn.co.uk/7/3/img-5207-6.jpg?width=1920&height=1080&crop=auto",
+            "quality" : [{ 
+                "name" : "overall",
+                "rating" : 3
+            },{ 
+                "name" : "mechanical",
+                "rating" : 4
+            },{ 
+                "name" : "powertrain",
+                "rating" : 2
+            },{ 
+                "name" : "body",
+                "rating" : 4
+            },{ 
+                "name" : "interior",
+                "rating" : 3
+            },{ 
+                "name" : "accessories",
+                "rating" : 2
+            }]
+        }
+    ]
+}
