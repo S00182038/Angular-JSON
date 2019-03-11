@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CarApiService } from '../app/car-api.service';
+import { CarApiService } from '../app/services/car-api.service';
 
 describe('CarApiService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
