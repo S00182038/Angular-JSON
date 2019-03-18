@@ -1,7 +1,5 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator';
-import 'rxjs/add/operator/do';
 import { Observable } from 'rxjs';
 import { catchError, tap} from 'rxjs/operators';
 
@@ -9,7 +7,7 @@ import { catchError, tap} from 'rxjs/operators';
   providedIn: 'root'
 })
 export class CarApiService {
-  private _siteURL = 'http://localhost:300/car_data';
+  private _siteURL = 'http://localhost:3000/car_data';
   constructor(private _http: HttpClient) { }
 
   getCarData(): Observable <ICar[]> {

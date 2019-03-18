@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CarApiService } from '../services/car-api.service';
-// import { Car } from '.../car';
 
 @Component({
   selector: 'app-car-list',
