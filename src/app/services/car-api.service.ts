@@ -14,8 +14,20 @@ export class CarApiService {
   errorMessage: string;
   constructor(private _http: HttpClient, private _afs: AngularFirestore) {
     this.carsDataCollection = _afs.collection<ICar>('cars_data');
+    // this.addAllProducts();
   }
-
+  addAllProducts(){
+    this._http.get<ICar[]>(this._siteURL).subscribe(
+      carsData => {
+        this.allCarsData = carsData;
+        for (const car of this.allCarsData) {
+          console.log('Adding : Make ' + car.make + '- Model' + car.model);
+          this.carsDataCollection.add(car);
+        }
+        },
+        error => (this.errorMessage = <any> error )
+          );
+    }
   getCarData(): Observable <ICar[]> {
     this.carsData = this.carsDataCollection.valueChanges();
     this.carsData.subscribe(data => console.log('getCarsData: ' + JSON.stringify(data)))
@@ -32,16 +44,4 @@ addCarData(car: ICar): void {
   //   return Observable.throw(err.message);
   // }
 }
-addAllProducts(){
-  this._http.get<ICar[]>(this._siteURL).subscribe(
-    carsData => {
-      this.allCarsData = carsData;
-      for (const car of this.allCarsData) {
-        console.log('Adding : Make ' + car.make + '- Model' + car.model);
-        this.carsDataCollection.add(car);
-      }
-      },
-      error => (this.errorMessage = <any> error )
-        );
-  }
-}
+

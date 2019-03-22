@@ -8,7 +8,6 @@ import { AddCarComponent } from './add-car/add-car.component';
 import { AngularFirestoreModule} from '@angular/fire/firestore';
 import {  AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-import { RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { from } from 'rxjs';
     BrowserModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
-  AngularFirestoreModule,
-  // RouterModule.forRoot( routes )
+  AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
